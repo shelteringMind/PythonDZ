@@ -44,20 +44,20 @@
 #385916 -> yes
 #123456 -> no
 
-print("Введите номер билета: ")
-num = input()
-sum1 = 0
-sum2 = 0
-if int(len(num)) % 2 == 0:
-    for i in range(0, int(len(num) / 2)):
-        sum1 += int(num[i])
-        sum2 += int(num[len(num) - i - 1])
-    if sum1 == sum2:
-        print(f"{num} -> yes")
-    else:
-        print(f"{num} -> no")  
-else:
-    print("Нельзя определить счастливый этот билет или нет...")
+#print("Введите номер билета: ")
+#num = input()
+#sum1 = 0
+#sum2 = 0
+#if int(len(num)) % 2 == 0:
+    #for i in range(0, int(len(num) / 2)):
+        #sum1 += int(num[i])
+        #sum2 += int(num[len(num) - i - 1])
+    #if sum1 == sum2:
+        #print(f"{num} -> yes")
+    #else:
+        #print(f"{num} -> no")  
+#else:
+    #print("Нельзя определить счастливый этот билет или нет...")
 
 #Задача 8: Требуется определить, можно ли от шоколадки размером n × m долек отломить k долек, если разрешается сделать один разлом по прямой между дольками (то есть разломить шоколадку на два прямоугольника).
 
@@ -66,3 +66,13 @@ else:
 #3 2 4 -> yes
 #3 2 1 -> no
 
+print("Введите длину шоколадки в дольках: ")
+num_len = int(input())
+print("Введите ширину шоколадки в дольках: ")
+num_wid = int(input())
+print("Введите количество долек, которые требуется отломить: ")
+num_lom = int(input())
+if (num_lom > 0) and (num_len * num_wid > num_lom) and (num_lom % num_len == 0 or num_lom % num_wid == 0):
+    print(f"{num_len} {num_wid} {num_lom} -> yes")
+else:
+    print(f"{num_len} {num_wid} {num_lom} -> no")

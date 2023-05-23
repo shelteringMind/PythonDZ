@@ -17,7 +17,7 @@ while it < n:
     else:
         count -= 1
     it += 1
-    print(f"{temp}  {count}")
+    #print(f"{temp}  {count}")
     
 raznica = abs(count)
 if raznica == 0:

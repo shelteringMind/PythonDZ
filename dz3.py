@@ -39,13 +39,14 @@ print(f"Введите значение элемента,\nсамый близк
 X = int(input())
 
 sp = [random.randint(1, 100) for i in range(N)]
-val_comp = abs(X-sp[0])
-val_save = sp[0]
-for val in sp:
+sp_new = list(set(sp))
+val_comp = abs(X-sp_new[0])
+val_save = sp_new[0]
+for val in sp_new:
     if abs(val-X) < val_comp:
         val_save = val
         val_comp = abs(X-val)
-print(*sp , f"-> {val_save}", sep=' ')
+print(*sp, f"-> {val_save}", sep=' ')
 
 # *Задача 20: * В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность. 
 # В случае с английским алфавитом очки распределяются так:

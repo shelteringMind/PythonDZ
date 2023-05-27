@@ -8,18 +8,18 @@
 #3
     #-> 1
 
-import collections
-import random
+#import collections
+#import random
 
-print(f"Введите количество чисел в списке:", end = ' ')
-N = int(input())
-print(f"Введите значение числа, которое необходимо найти в списке:", end = ' ')
-X = int(input())
+#print(f"Введите количество чисел в списке:", end = ' ')
+#N = int(input())
+#print(f"Введите значение числа, которое необходимо найти в списке:", end = ' ')
+#X = int(input())
 
-sp = [random.randint(1, 100) for i in range(N)]
-num_count = collections.Counter(sp)
-print(*sp, sep=' ')
-print(f"{X} -> {num_count[X]}")
+#sp = [random.randint(1, 100) for i in range(N)]
+#num_count = collections.Counter(sp)
+#print(*sp, sep=' ')
+#print(f"{X} -> {num_count[X]}")
 
 # Задача 18: Требуется найти в массиве A[1..N] самый близкий по величине элемент к заданному числу X. 
 # Пользователь в первой строке вводит натуральное число N – количество элементов в массиве.
@@ -30,6 +30,22 @@ print(f"{X} -> {num_count[X]}")
     #1 2 3 4 5
 #6
     #-> 5
+    
+import random
+        
+print(f"Введите количество чисел в списке:", end = ' ')
+N = int(input())
+print(f"Введите значение элемента,\nсамый близкий по величине элемент к которому требуется найти:", end = ' ')
+X = int(input())
+
+sp = [random.randint(1, 100) for i in range(N)]
+val_comp = abs(X-sp[0])
+val_save = sp[0]
+for val in sp:
+    if abs(val-X) < val_comp:
+        val_save = val
+        val_comp = abs(X-val)
+print(*sp , f"-> {val_save}", sep=' ')
 
 # *Задача 20: * В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность. 
 # В случае с английским алфавитом очки распределяются так:

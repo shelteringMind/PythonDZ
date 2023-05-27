@@ -32,6 +32,7 @@
     #-> 5
     
 import random
+import time
         
 print(f"Введите количество чисел в списке:", end = ' ')
 N = int(input())
@@ -39,14 +40,35 @@ print(f"Введите значение элемента,\nсамый близк
 X = int(input())
 
 sp = [random.randint(1, 100) for i in range(N)]
-sp_new = list(set(sp))
+
+start_set = time.time_ns()        
+sp_new =list(set(sp))        
 val_comp = abs(X-sp_new[0])
-val_save = sp_new[0]
+val_save = sp_new[0]        
 for val in sp_new:
     if abs(val-X) < val_comp:
         val_save = val
+        val_comp = abs(X-val)       
+end_set = time.time_ns() - start_set
+
+start_list = time.time_ns()
+val_comp = abs(X-sp[0])
+val_save = sp[0]
+for val in sp:
+    if abs(val-X) < val_comp:
+        val_save = val
         val_comp = abs(X-val)
+end_list = time.time_ns() - start_list
+
 print(*sp, f"-> {val_save}", sep=' ')
+
+try:
+    speed_diff = end_list/end_set
+except ZeroDivisionError:
+    speed_diff = 1
+    
+print(f"Алгоритм с использованием множества в {speed_diff:.{2}f} раз быстрее")
+
 
 # *Задача 20: * В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность. 
 # В случае с английским алфавитом очки распределяются так:

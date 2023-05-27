@@ -8,16 +8,17 @@
 #3
     #-> 1
 
-import random
 import collections
+import random
 
 print(f"Введите количество чисел в списке:", end = ' ')
 N = int(input())
 print(f"Введите значение числа, которое необходимо найти в списке:", end = ' ')
 X = int(input())
 
-sp = [random.randint(1, 1000) for i in range(N)]
+sp = [random.randint(1, 100) for i in range(N)]
 num_count = collections.Counter(sp)
+print(*sp, sep=' ')
 print(f"{X} -> {num_count[X]}")
 
 # Задача 18: Требуется найти в массиве A[1..N] самый близкий по величине элемент к заданному числу X. 

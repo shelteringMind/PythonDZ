@@ -24,33 +24,31 @@
 #Собирающий модуль за один заход, находясь непосредственно перед некоторым кустом, собирает ягоды с этого куста и с двух соседних с ним.
 #Напишите программу для нахождения максимального числа ягод, которое может собрать за один заход собирающий модуль, 
 #находясь перед некоторым кустом заданной во входном файле грядки.
-
+    
 import random
 
-n = int(input("Введите количество кустов на грядке: "))
-
-numberries = [random.randint(1, 100) for i in range(n)]
-sum = 0
-
-for iter in range(0, len(numberries)):
-    print(f"{iter + 1} -> {numberries[iter]}")
-
-bush = int(input("Введите номер куста, напротив которого расположен собирающий модуль: "))
-
-for iter in range(bush-2, bush+1):
-    if iter > n - 1:
-        iter = 0
-    elif iter < 0:
-        iter = n - 1
-    sum += numberries[iter]
-    numberries[iter] = 0
+def sumBerBush(arr, runner):
+    summaThree = 0
+    n = len(arr)
+    if n < 3:
+        summaThree = sum(arr)
+    else:
+        for iter in range(runner - 1, runner + 2):
+            if iter > n - 1:
+                iter = 0
+            elif iter < 0:
+                iter = n - 1
+            summaThree += arr[iter]
+    return summaThree   
     
-if bush > len(numberries) or bush < 0:
-    print("На грядке нет такого количества кустов черники...")
-else:
-    print(f"Модуль соберет {sum} ягод черники")
+n = int(input("Введите количество кустов на грядке: "))    
+numBerries = [random.randint(1, 100) for i in range(n)]
+
+if n <= 3: qVar = 1
+else: qVar = n
     
-
-
-
+for iter in range(0, len(numBerries)):
+    print(f"{iter + 1} -> {numBerries[iter]}")
     
+sumThreeBush = [sumBerBush(numBerries, it) for it in range(qVar)]
+print(f"Максимум за один заход модуль может собрать {max(sumThreeBush)} ягод черники")

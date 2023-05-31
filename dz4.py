@@ -3,17 +3,17 @@
 #Пользователь вводит 2 числа. n — кол-во элементов первого множества. m — кол-во элементов второго множества. 
 #Затем пользователь вводит сами элементы множеств.
 
-import random
+#import random
 
-n = int(input("Введите количество чисел в первом списке: "))
-m = int(input("Введите количество чисел во втором списке: "))
+#n = int(input("Введите количество чисел в первом списке: "))
+#m = int(input("Введите количество чисел во втором списке: "))
 
-spn = [random.randint(1, 10) for i in range(n)]
-spm = [random.randint(1, 10) for i in range(m)]
+#spn = [random.randint(1, 10) for i in range(n)]
+#spm = [random.randint(1, 10) for i in range(m)]
 
-print(*spn, sep=' ')
-print(*spm, sep=' ')
-print(*set(spn+spm), sep=' ')
+#print(*spn, sep=' ')
+#print(*spm, sep=' ')
+#print(*set(spn+spm), sep=' ')
 
 #Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. 
 #Она растёт на круглой грядке, причём кусты высажены только по окружности. 
@@ -24,3 +24,33 @@ print(*set(spn+spm), sep=' ')
 #Собирающий модуль за один заход, находясь непосредственно перед некоторым кустом, собирает ягоды с этого куста и с двух соседних с ним.
 #Напишите программу для нахождения максимального числа ягод, которое может собрать за один заход собирающий модуль, 
 #находясь перед некоторым кустом заданной во входном файле грядки.
+
+import random
+
+n = int(input("Введите количество кустов на грядке: "))
+
+numberries = [random.randint(1, 100) for i in range(n)]
+sum = 0
+
+for iter in range(0, len(numberries)):
+    print(f"{iter + 1} -> {numberries[iter]}")
+
+bush = int(input("Введите номер куста, напротив которого расположен собирающий модуль: "))
+
+for iter in range(bush-2, bush+1):
+    if iter > n - 1:
+        iter = 0
+    elif iter < 0:
+        iter = n - 1
+    sum += numberries[iter]
+    numberries[iter] = 0
+    
+if bush > len(numberries) or bush < 0:
+    print("На грядке нет такого количества кустов черники...")
+else:
+    print(f"Модуль соберет {sum} ягод черники")
+    
+
+
+
+    

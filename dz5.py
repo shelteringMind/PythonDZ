@@ -4,16 +4,16 @@
 #A = 3; B = 5 -> 243 (3⁵)
     #A = 2; B = 3 -> 8
     
-A = int(input("Введите основание степени: "))
-B = int(input("Введите степень: "))
+#A = int(input("Введите основание степени: "))
+#B = int(input("Введите степень: "))
 
-def recExp(base, expon):
-    if expon == 0:
-        return 1
-    else:
-        return base * recExp(base, expon - 1)
+#def recExp(base, expon):
+    #if expon == 0:
+        #return 1
+    #else:
+        #return base * recExp(base, expon - 1)
 
-print(f"A = {A}; B = {B} -> {recExp(A, B)}")
+#print(f"A = {A}; B = {B} -> {recExp(A, B)}")
     
     
 #Задача 28: Напишите рекурсивную функцию sum(a, b), возвращающую сумму двух целых неотрицательных чисел.
@@ -21,3 +21,14 @@ print(f"A = {A}; B = {B} -> {recExp(A, B)}")
 #*Пример:*
 #2 2
     #4
+    
+a = int(input("Введите число A: "))
+b = int(input("Введите число B: "))
+
+def sumNum(a, b):
+    if b == 0:
+        return a
+    else:
+        return sumNum(a, b - 1) + 1
+    
+print(f"{a} + {b} = {sumNum(a, b)}")

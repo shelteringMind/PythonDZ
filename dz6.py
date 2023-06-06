@@ -19,19 +19,14 @@
 import random
 
 amountElements = int(input("Введите количество элементов: "))
-
-listElements = [random.randint(1, 100) for val in range(amountElements)]
-
 minElement = int(input("Введите минимальный элемент: "))
-
 maxElement = int(input("Введите максимальный элемент: "))
 
+listElements = [random.randint(1, 100) for val in range(amountElements)]
 listIndex = [index for index, val in enumerate(listElements) if val >= minElement and val <= maxElement]
 
 for listEl in listElements:
     print(f"{listEl}", end =" ")
-
 print("\n")
-
 for listId in listIndex:
     print(f"{listId}", end =" ")

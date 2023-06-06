@@ -31,7 +31,7 @@ listIndex = [index for index, val in enumerate(listElements) if val >= minElemen
 for listEl in listElements:
     print(f"{listEl}", end =" ")
 
-print(f"\n")
+print("\n")
 
 for listId in listIndex:
     print(f"{listId}", end =" ")

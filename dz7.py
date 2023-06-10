@@ -25,10 +25,10 @@ stored_value_counter_vowels = 0
 phrase_end = 1
 
 
-for i,v in enumerate(str_puh):
-    if str_puh[i] != ' ':
-        counter_vowels += phrase_end * vowels_cost.get(v, 0)
-    elif str_puh[i] == ' ':
+for index,letter in enumerate(str_puh):
+    if str_puh[index] != ' ':
+        counter_vowels += phrase_end * vowels_cost.get(letter, 0)
+    elif str_puh[index] == ' ':
         phrase_end *= -1
         counter_space += 1
         if counter_space == 1:

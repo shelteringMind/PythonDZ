@@ -8,12 +8,12 @@
 #n = int(input("Введите количество чисел в первом списке: "))
 #m = int(input("Введите количество чисел во втором списке: "))
 
-#spn = [random.randint(1, 10) for i in range(n)]
-#spm = [random.randint(1, 10) for i in range(m)]
+#spn = [random.randint(-10, 100) for i in range(n)]
+#spm = [random.randint(-10, 100) for i in range(m)]
 
 #print(*spn, sep=' ')
 #print(*spm, sep=' ')
-#print(*set(spn+spm), sep=' ')
+#print(*list(sorted(set(spn + spm))), sep=' ')
 
 #Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. 
 #Она растёт на круглой грядке, причём кусты высажены только по окружности. 
@@ -25,30 +25,30 @@
 #Напишите программу для нахождения максимального числа ягод, которое может собрать за один заход собирающий модуль, 
 #находясь перед некоторым кустом заданной во входном файле грядки.
     
-import random
+#import random
 
-def sumBerBush(arr, runner):
-    summaThree = 0
-    n = len(arr)
-    if n < 3:
-        summaThree = sum(arr)
-    else:
-        for iter in range(runner - 1, runner + 2):
-            if iter > n - 1:
-                iter = 0
-            elif iter < 0:
-                iter = n - 1
-            summaThree += arr[iter]
-    return summaThree   
+#def sumBerBush(arr, runner):
+    #summaThree = 0
+    #n = len(arr)
+    #if n < 3:
+        #summaThree = sum(arr)
+    #else:
+        #for iter in range(runner - 1, runner + 2):
+            #if iter > n - 1:
+                #iter = 0
+            #elif iter < 0:
+                #iter = n - 1
+            #summaThree += arr[iter]
+    #return summaThree   
     
-n = int(input("Введите количество кустов на грядке: "))    
-numBerries = [random.randint(1, 100) for i in range(n)]
+#n = int(input("Введите количество кустов на грядке: "))    
+#numBerries = [random.randint(1, 100) for i in range(n)]
 
-if n <= 3: qVar = 1
-else: qVar = n
+#if n <= 3: qVar = 1
+#else: qVar = n
     
-for iter in range(0, len(numBerries)):
-    print(f"{iter + 1} -> {numBerries[iter]}")
+#for iter in range(0, len(numBerries)):
+    #print(f"{iter + 1} -> {numBerries[iter]}")
     
-sumThreeBush = [sumBerBush(numBerries, it) for it in range(qVar)]
-print(f"Максимум за один заход модуль может собрать {max(sumThreeBush)} ягод черники")
+#sumThreeBush = [sumBerBush(numBerries, it) for it in range(qVar)]
+#print(f"Максимум за один заход модуль может собрать {max(sumThreeBush)} ягод черники")

@@ -57,7 +57,7 @@ def change_contact():
     comment = input('Введите комментарий к контакту: ')       
     cng_cnt = phone_book[index]
     phone_book[index] = {'name': name, 'phone': phone, 'comment': comment}
-    print(f'Контакт {cng_cnt.get("name")} успешно изменен!')
+    print(f'Контакт {cng_cnt.get("name")} успешно изменен на {phone_book[index].get("name")}!')
     print('=' * 200 + '\n')    
 
 def remove():

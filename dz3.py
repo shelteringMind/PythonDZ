@@ -94,25 +94,25 @@
 #ноутбук
 #12
 
-one_cost = dict.fromkeys(['A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R', 'А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т'], 1)
-two_cost = dict.fromkeys(['D', 'G', 'Д', 'К', 'Л', 'М', 'П', 'У'], 2)
-three_cost = dict.fromkeys(['B', 'C', 'M', 'P', 'Б', 'Г', 'Ё', 'Ь', 'Я'], 3)
-four_cost = dict.fromkeys(['F', 'H', 'V', 'W', 'Y', 'Й', 'Ы' ], 4)
-five_cost = dict.fromkeys(['K', 'Ж', 'З', 'Х', 'Ц', 'Ч' ], 5)
-eight_cost = dict.fromkeys(['J', 'X', 'Ш', 'Э', 'Ю'], 8)
-ten_cost  = dict.fromkeys(['Q', 'Z', 'Ф', 'Щ', 'Ъ'], 10)
-merged_dict = one_cost | two_cost | three_cost | four_cost | five_cost | eight_cost | ten_cost
+#one_cost = dict.fromkeys(['A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R', 'А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т'], 1)
+#two_cost = dict.fromkeys(['D', 'G', 'Д', 'К', 'Л', 'М', 'П', 'У'], 2)
+#three_cost = dict.fromkeys(['B', 'C', 'M', 'P', 'Б', 'Г', 'Ё', 'Ь', 'Я'], 3)
+#four_cost = dict.fromkeys(['F', 'H', 'V', 'W', 'Y', 'Й', 'Ы' ], 4)
+#five_cost = dict.fromkeys(['K', 'Ж', 'З', 'Х', 'Ц', 'Ч' ], 5)
+#eight_cost = dict.fromkeys(['J', 'X', 'Ш', 'Э', 'Ю'], 8)
+#ten_cost  = dict.fromkeys(['Q', 'Z', 'Ф', 'Щ', 'Ъ'], 10)
+#merged_dict = one_cost | two_cost | three_cost | four_cost | five_cost | eight_cost | ten_cost
 
-print(f"Введите слово:", end = ' ')
-str = input()
-str_print = str
+#print(f"Введите слово:", end = ' ')
+#str = input()
+#str_print = str
 
-str = str.strip()
-str = str.upper()
-str_list = list(str)
-cost_counter = 0;
+#str = str.strip()
+#str = str.upper()
+#str_list = list(str)
+#cost_counter = 0;
 
-for iter, letter in enumerate(str_list): 
-    cost_counter += merged_dict.get(letter, 0)
+#for iter, letter in enumerate(str_list): 
+    #cost_counter += merged_dict.get(letter, 0)
     
-print(f"{str_print} стоит {cost_counter}")
+#print(f"{str_print} стоит {cost_counter}")

@@ -66,13 +66,13 @@
 #3 2 4 -> yes
 #3 2 1 -> no
 
-print("Введите длину шоколадки в дольках: ")
-num_len = int(input())
-print("Введите ширину шоколадки в дольках: ")
-num_wid = int(input())
-print("Введите количество долек, которые требуется отломить: ")
-num_lom = int(input())
-if (num_lom > 0) and (num_len * num_wid > num_lom) and (num_lom % num_len == 0 or num_lom % num_wid == 0):
-    print(f"{num_len} {num_wid} {num_lom} -> yes")
-else:
-    print(f"{num_len} {num_wid} {num_lom} -> no")
+#print("Введите длину шоколадки в дольках: ")
+#num_len = int(input())
+#print("Введите ширину шоколадки в дольках: ")
+#num_wid = int(input())
+#print("Введите количество долек, которые требуется отломить: ")
+#num_lom = int(input())
+#if (num_lom > 0) and (num_len * num_wid > num_lom) and (num_lom % num_len == 0 or num_lom % num_wid == 0):
+    #print(f"{num_len} {num_wid} {num_lom} -> yes")
+#else:
+    #print(f"{num_len} {num_wid} {num_lom} -> no")

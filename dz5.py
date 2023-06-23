@@ -22,13 +22,13 @@
 #2 2
     #4
     
-a = int(input("Введите число A: "))
-b = int(input("Введите число B: "))
+#a = int(input("Введите число A: "))
+#b = int(input("Введите число B: "))
 
-def sumNum(a, b):
-    if b == 0:
-        return a
-    else:
-        return sumNum(a, b - 1) + 1
+#def sumNum(a, b):
+    #if b == 0:
+        #return a
+    #else:
+        #return sumNum(a, b - 1) + 1
     
-print(f"{a} + {b} = {sumNum(a, b)}")
+#print(f"{a} + {b} = {sumNum(a, b)}")

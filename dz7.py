@@ -57,10 +57,10 @@
 #5 10 15 20 25 30
 #6 12 18 24 30 36
 
-def print_operation_table(f, num_rows, num_columns):
-    itog = [[f(i, j) for i in range(1, num_rows + 1)] for j in range(1, num_columns + 1)]
-    for st in itog:
-        st_num = str(st).replace(', ', ' ').replace(']', '').replace('[', '')
-        print(st_num, sep='\n')
+#def print_operation_table(f, num_rows, num_columns):
+    #itog = [[f(i, j) for i in range(1, num_rows + 1)] for j in range(1, num_columns + 1)]
+    #for st in itog:
+        #st_num = str(st).replace(', ', ' ').replace(']', '').replace('[', '')
+        #print(st_num, sep='\n')
      
-print_operation_table(lambda x, y: x * y, 5, 5)
+#print_operation_table(lambda x, y: x * y, 10, 10)

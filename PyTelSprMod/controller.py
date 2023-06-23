@@ -8,6 +8,7 @@ def start():
         choice = menu()
         match choice:
             case 1:
+                model.phone_book = []
                 model.open_file()
                 print_message(text.open_successful)
             case 2:
@@ -15,7 +16,6 @@ def start():
                 print_message(text.save_successful)
             case 3:
                 show_contacts(model.phone_book)
-                model.phone_book = []
             case 4:
                 new = input_contact(text.input_new_contact)
                 model.add_contact(new)

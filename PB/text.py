@@ -30,6 +30,7 @@ def add_successful(name: str) -> str:
 
 search_word = 'Введите строку для поиска: '
 index_remove = 'Введите ID контакта, который хотите удалить: '
+index_change = 'Введите ID контакта, который хотите изменить: '
 
 
 def empty_search(word: str) -> str:
@@ -37,6 +38,12 @@ def empty_search(word: str) -> str:
 
 def remove_contact(name: str) -> str:
     return f'Контакт {name} успешно удален!'
+
+def contact_changed(name: str):
+    return f'Контакт {name} успешно изменен!'
+
+def input_return(message: str) -> str:
+    return input(message)
 
 change_confirm = 'У вас есть не сохраненые изменения. Сохранить перед выходом? (y/n)'
 

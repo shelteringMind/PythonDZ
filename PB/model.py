@@ -63,7 +63,14 @@ class PhoneBook:
     def add_contact(self, new: dict[str, str]):
         contact = {self.check_id(): new}
         self.contact.update(contact)
-
+        
+    def change(self, index, new: dict[str, str]):
+        str_change = self.contact.get(index)
+        name = str_change.get('name')
+        contact = {index: new}
+        self.contact.update(contact)
+        return name
+        
     def remove(self, index):
         name = self.contact.pop(str(index))
         return name.get('name')

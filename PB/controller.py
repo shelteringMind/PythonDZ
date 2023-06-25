@@ -29,7 +29,10 @@ def start():
                 result = pb.search(word)
                 view.show_contacts(result, text.empty_search(word))
             case 6:
-                pass
+                index = view.view_input(text.index_change)
+                new = view.add_contact()
+                name = pb.change(index, new)
+                view.print_message(text.contact_changed(name))
             case 7:
                 word = view.view_input(text.search_word)
                 result = pb.search(word)
@@ -37,7 +40,6 @@ def start():
                 index = view.view_input(text.index_remove)
                 name = pb.remove(index)
                 view.print_message(text.remove_contact(name))
-
             case 8:
                 if pb.check_on_exit():
                     answer = view.view_input(text.change_confirm)
